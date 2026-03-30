@@ -41,7 +41,7 @@ const DEFAULT_PROVIDER: AIProviderConfig = {
   id: DEFAULT_PROVIDER_ID,
   name: '302AI Gemini 3.1 Flash Lite',
   baseURL: 'https://api.302ai.cn/v1',
-  apiKey: 'sk-piyVj5Yv6yrOtnUlmtdtmi0Vq92Y0sCTD8tT2oKH2t5BWrvR',
+  apiKey: '',
   model: 'gemini-3.1-flash-lite-preview',
   maxTokens: 4096,
   temperature: 0.7,

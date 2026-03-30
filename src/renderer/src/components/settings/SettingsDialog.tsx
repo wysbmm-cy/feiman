@@ -127,7 +127,13 @@ export function SettingsDialog() {
                   暂未配置 AI 模型，点击"添加模型"开始配置。
                 </p>
               ) : (
-                <div className="space-y-2">
+                <>
+                  {settings.aiProviders.some(p => !p.apiKey) && (
+                    <div className="mb-3 p-2 rounded text-[10px] border border-orange-500/30 bg-orange-500/5 text-orange-400">
+                      ⚠️ 检测到部分模型未配置 API Key，请点击“编辑”填入您的 Key 才能正常使用。
+                    </div>
+                  )}
+                  <div className="space-y-2">
                   {settings.aiProviders.map((p) => {
                     const status = testStatus[p.id]
                     return (
@@ -193,7 +199,8 @@ export function SettingsDialog() {
                       </div>
                     )
                   })}
-                </div>
+                  </div>
+                </>
               )}
 
               {/* AI Role Allocation */}
@@ -389,7 +396,7 @@ export function SettingsDialog() {
               {[
                 { label: '显示名称', key: 'name', placeholder: 'DeepSeek V3' },
                 { label: 'API Base URL', key: 'baseURL', placeholder: 'https://api.deepseek.com/v1' },
-                { label: 'API Key', key: 'apiKey', placeholder: 'sk-...' },
+                { label: 'API Key', key: 'apiKey', placeholder: '在此填入您的 API Key (必须)' },
                 { label: '模型 ID', key: 'model', placeholder: 'deepseek-chat' },
                 { label: '最大 Token', key: 'maxTokens', placeholder: '4096', type: 'number' }
               ].map(({ label, key, placeholder, type }) => (
