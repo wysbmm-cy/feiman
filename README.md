@@ -1,6 +1,6 @@
-# 费曼学习法 AI 助手
+# Anything Feynman
 
-**版本**: 1.0.0（在cpp_ver分支中）
+**版本**: 1.0.0
 
 一款基于费曼学习法的 AI 学习软件，通过"以教促学"的方式帮助你深度理解知识。
 
@@ -72,8 +72,8 @@ pnpm package:win
 ```
 
 打包完成后，在 `dist/` 目录下会生成：
-- `费曼学习助手 Setup 1.0.0.exe` - NSIS 安装程序
-- `费曼学习助手-1.0.0-win.exe` - 便携版（如果配置）
+- `Anything Feynman Setup 1.0.0.exe` - NSIS 安装程序
+- `Anything Feynman-1.0.0-win.exe` - 便携版（如果配置）
 
 #### 方法二：在 Linux/macOS 上交叉编译 Windows 版本
 ```bash
@@ -133,8 +133,8 @@ pnpm package:mac
 ```
 
 输出：
-- `费曼学习助手-1.0.0.dmg` - DMG 安装镜像
-- `费曼学习助手-1.0.0-mac.zip` - ZIP 压缩包
+- `Anything Feynman-1.0.0.dmg` - DMG 安装镜像
+- `Anything Feynman-1.0.0-mac.zip` - ZIP 压缩包
 
 > **注意**：macOS 应用需要 Apple Developer 证书签名才能在其他 Mac 上运行。
 
@@ -144,8 +144,8 @@ pnpm package:linux
 ```
 
 输出：
-- `费曼学习助手-1.0.0.AppImage` - 通用 Linux 格式
-- `费曼学习助手_1.0.0_amd64.deb` - Debian/Ubuntu 包
+- `Anything Feynman-1.0.0.AppImage` - 通用 Linux 格式
+- `Anything Feynman_1.0.0_amd64.deb` - Debian/Ubuntu 包
 
 ### 打包所有平台
 ```bash
@@ -162,7 +162,7 @@ pnpm package
 {
   "build": {
     "appId": "com.feiman.app",
-    "productName": "费曼学习助手",
+    "productName": "Anything Feynman",
     "copyright": "Copyright © 2024 wysbmm-cy, Aurolystant",
     "directories": {
       "output": "dist",
@@ -186,7 +186,7 @@ pnpm package
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "费曼学习助手"
+      "shortcutName": "Anything Feynman"
     }
   }
 }
@@ -295,7 +295,7 @@ Electron 应用通常在 100MB+。优化方法：
 3. **检查控制台错误**：
    - 按 `Ctrl+Shift+I` 打开开发者工具
    - 查看 Console 标签页的错误信息
-4. **清除应用数据**：删除 `%APPDATA%/费曼学习助手` 目录
+4. **清除应用数据**：删除 `%APPDATA%/Anything Feynman` 目录
 
 ### Q: 应用显示加载中但无响应
 这通常表示 JavaScript 执行出错：
